@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Producto extends Model
 {
+    protected $fillable = ['stock'];
     use HasFactory;
+    public function calcularStockTotal()
+    {
+        return $this->stock;
+    }
 }
